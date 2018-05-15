@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generator.cs" />
     <Compile Include="Modul\Car.cs" />
     <Compile Include="Modul\Component.cs" />
     <Compile Include="Modul\Project.cs" />
