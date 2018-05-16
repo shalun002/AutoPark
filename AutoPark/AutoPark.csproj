@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoPark.Lib\AutoPark.Lib.csproj">
+      <Project>{98A51A44-85CB-4C44-A210-C6F63C33F1DA}</Project>
+      <Name>AutoPark.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
