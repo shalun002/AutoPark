@@ -45,6 +45,7 @@
     <Compile Include="Modul\Component.cs" />
     <Compile Include="Modul\Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
