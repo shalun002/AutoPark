@@ -22,7 +22,7 @@ namespace AutoPark.Lib
         {
             foreach (Car item in project.cars)
             {
-                if (item.CarModel == CarModel) return item;
+                if (item.CarModel.ToLower() == CarModel.ToLower()) return item;
             }
             return null;
         }
