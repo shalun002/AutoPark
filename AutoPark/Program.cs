@@ -38,7 +38,7 @@ namespace AutoPark
                 Console.Write("-> ");
                 string name = Console.ReadLine();
 
-                temp = projects.FirstOrDefault(o => o.ProjectName == name);
+                temp = projects.FirstOrDefault(o => o.ProjectName.ToLower() == name.ToLower());
 
                 if (temp != null)
                     break;
@@ -69,15 +69,13 @@ namespace AutoPark
                     {
                         Console.Write("Введите гос. номер машины: ");
                         Int32.TryParse(Console.ReadLine(), out gosNomer);
-
                         service.Search(temp, gosNomer);
-
                     }
                     break;
                 case 2:
                     {
                         Console.Write("Введите модель машины: ");
-                        service.Search(temp, Console.ReadLine());
+                        findCar = service.Search(temp, Console.ReadLine());
                     }
                     break;
             }
