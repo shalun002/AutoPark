@@ -15,11 +15,14 @@ namespace AutoPark.Lib.Modul
 
         public void PrintInfo()
         {
-            Console.WriteLine("Project: {0}", ProjectName);
+            Console.WriteLine("/////////////////////////////////////////////////");
+            Console.WriteLine("\t\t Project: {0}", ProjectName);
+            Console.WriteLine("/////////////////////////////////////////////////");
             foreach (Car item in cars)
             {
                 Console.WriteLine("================================================");
                 item.PrintInfo();
+                Console.WriteLine();
             }
         }
     }

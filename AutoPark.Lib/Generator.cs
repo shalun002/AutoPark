@@ -18,15 +18,15 @@ namespace AutoPark.Lib.Generator
             {
                 if(projects == null)
 
-                    projects = new List<Project>();
-                    projects.Add(new Project() { ProjectName = "Варваринский ГОК" });
-                    projects[0].cars = GenerCar(out message);
+                projects = new List<Project>();
+                projects.Add(new Project() { ProjectName = "Варваринский ГОК" });
+                projects[0].cars = GenerCar(out message);
 
-                    projects.Add(new Project() { ProjectName = "Карагандинская шахта" });
-                    projects[1].cars = GenerCar(out message);
+                projects.Add(new Project() { ProjectName = "Карагандинская шахта" });               
+                projects[1].cars = GenerCar(out message);
 
-                    projects.Add(new Project() { ProjectName = "СС ГОК" });
-                    projects[2].cars = GenerCar(out message);
+                projects.Add(new Project() { ProjectName = "СС ГОК" });
+                projects[2].cars = GenerCar(out message);
 
                 message = "Проект добавлен успешно!";
                     return true;
@@ -48,13 +48,14 @@ namespace AutoPark.Lib.Generator
                 Car car = new Car();
                 car.GodVipuska = DateTime.Now.AddMonths((rand.Next(10, 200) * -1));
                 car.GosNomer = rand.Next(1000, 9999);
-                car.CarModel = "Model " + rand.Next(1, 10);
-                car.CarType = (CarType)rand.Next(1, 3);
+                car.CarModel = "Model" + rand.Next(1, 10);
+                car.CarType = (CarType)rand.Next(0, 4);
+                car.CarStatus = Status.Activ;
                 car.components = GenerComponent(out message);
 
                 cars.Add(car);
             }
-            message = "Cars added sucessfull!";
+            message = "Машина добавлена успешно!";
             return cars;
         }
 
@@ -70,7 +71,7 @@ namespace AutoPark.Lib.Generator
 
                 components.Add(component);
             }
-            message = "Components sucessfull!";
+            message = "Компонент добавлен успешно!";
             return components;
         }
     }
