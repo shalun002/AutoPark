@@ -29,20 +29,5 @@ namespace AutoPark.Lib
             }
             return null;
         }
-
-        //public void StatusCar(List<Project> projects, Car CarModel)
-        //{
-        //    for (int i = 0; i < projects.E   .cars.Count; i++)
-        //    {
-
-        //    }
-
-        //    foreach (Car item in project.cars)
-        //    {
-        //        if (item.CarModel == CarModel.CarModel);
-        //        item.CarStatus = 
-        //        Console.Clear();
-        //    }
-        //}
     }
 }
